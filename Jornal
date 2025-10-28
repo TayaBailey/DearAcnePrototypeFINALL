@@ -1,0 +1,188 @@
+## Week 3:
+
+Interface Practice & Early Debugging  
+
+**Focus:**  
+Started experimenting with Anvil’s design view. Learned how UI components connect to Python code through event handling.  
+
+**Feelings / Insights:**  
+Excited but restless — every time something worked, another thing broke. I realised how different visual design feels when it’s interactive. Buttons actually *do* things now, which made me rethink how users experience flow and feedback.  
+
+**Key Progress:**  
+- Added dropdowns for skin condition and mood.  
+- Used lists to populate items dynamically:  
+  ```python
+  self.drop_down_skin.items = ['Clear', 'Mild', 'Moderate', 'Severe']
+  self.drop_down_mood.items = ['Happy', 'Neutral', 'Stressed', 'Sad']
+Began exploring how to switch between forms (Login → Dashboard).
+
+**Challenges:**
+- Linking forms without triggering import errors.
+- Forgetting to save before testing (rookie mistake).
+- Accidentally overwrote working components.
+
+**Week 4 **
+#Reality Hits
+
+**Focus:**
+- Tried building actual form connections and encountered my first major roadblock:
+- ModuleNotFoundError: No module named 'DashboardForm'
+
+**Feelings / Insights:**
+- Frustration peaked. Every tutorial seemed to assume prior knowledge I didn’t have. I started doubting whether I could actually make this work, but kept going.
+
+**Key Progress:**
+
+- Began understanding the difference between client-side and server-side code.
+- Experimented with parent and sibling hierarchies in Anvil.
+- Learned how to locate variables and check component IDs properly.
+
+**Challenges:**
+
+- Keeping track of form relationships and imports.
+- Accidentally breaking working code while testing new logic.
+- Feeling behind compared to classmates who had prior coding experience.
+
+**Small Wins:**
+- With help from peers, [ruby especially] and forums, got dropdowns displaying correctly.
+- Labels updated dynamically based on selections: that moment felt huge.
+
+**Week 5**
+#Stuck, Stressed, Still Showing Up
+
+**Focus:**
+- Rebuilt my forms again, trying to clean up the project structure and reduce confusion.
+
+**Feelings / Insights:**
+- Proud but exhausted. Every night felt like a loop of debugging and Googling, but slowly things started making sense.
+
+**Key Progress:**
+- Re-tested all imports and function calls.
+- Tidied variable naming for consistency.
+- Organised layout spacing for clarity.
+
+**Challenges:**
+
+- Importing forms (from .DashboardForm import DashboardForm) kept breaking.
+
+- Tried both parent–child and sibling hierarchies with no luck.
+
+- Felt burnt out and unsure if I’d finish.
+
+**Breakthrough:**
+- Realised Anvil separates client/server modules not everything can be imported freely. That discovery explained so many earlier issues.
+
+**Week 6**
+#Re-Centred & Refocused
+
+**Focus:**
+Stopped trying to fix everything at once. Narrowed my goal to one stable user flow: Login → Dashboard → Log Entry → Logout.
+
+**Feelings / Insights:**
+Calmer. I finally treated the project like a series of small wins instead of one impossible task.
+
+**Key Progress:**
+- Cleaned redundant functions and added comments for clarity.
+- Used print statements to debug logic instead of guessing.
+- Began documenting issues and fixes inside report appendix
+
+**Challenges:**
+- Keeping focus when small bugs stacked up.
+- Managing motivation after repeated errors.
+
+**Small Wins:**
+
+- Used event handling properly for the first time.
+- Interface started behaving predictably.
+- Understood that problem-solving is iterative, not instant.
+
+**Week 7 **
+#Momentum Returns
+
+**Focus:**
+- Focused on stability and reducing bugs rather than adding new features.
+
+**Feelings / Insights:**
+- Things started to click. I could predict what might go wrong before it happened. That felt like real progress.
+
+**Key Progress:**
+
+- Cleaned up branch conflicts and synced versions.
+- Refined layout consistency across forms.
+- Adjusted button visibility logic using conditionals:
+
+if self.user:
+    self.button_login.visible = False
+    self.button_logout.visible = True
+else:
+    self.button_login.visible = True
+    self.button_logout.visible = False
+
+
+**Challenges:**
+
+- Accidentally deleted working code while cleaning files.
+- Form navigation still inconsistent between pages.
+
+**Small Wins:**
+
+- Login UI now functions properly.
+- I can finally read my own code and understand it.
+
+**Week 8 – Resilience & Redirection**
+
+**Focus:**
+- Reassessed project scope. Decided to focus on demonstrating four key coding literacy skills:
+functions, parameters, lists, and event handling.
+
+**Feelings / Insights:**
+Proud. Burnt out but proud. The app isn’t perfect, but I’ve come so far from where I started.
+
+**Key Progress:**
+
+- Recorded a walkthrough showing current working features.
+- Cleaned interface visuals and adjusted component spacing.
+- Wrote clear code comments to link logic to user actions.
+
+**Challenges:**
+
+- Accepting limitations without feeling like I failed.
+- Managing stress and fatigue across subjects.
+
+**Small Wins:**
+
+- Found satisfaction in smaller milestones.
+- Started viewing challenges as part of learning rather than setbacks.
+
+**Week 9 
+#Refinement & Rebuild
+
+**Focus:**
+Refining layout, re-checking connections, and cleaning redundant code before polishing.
+
+**Feelings / Insights:**
+A strange mix of clarity and chaos. I know what should happen — it’s just about making it happen consistently.
+
+**Key Progress:**
+
+- Rebuilt mood-tracking logic using cleaner parameters:
+
+def update_mood_label(self, mood):
+    """Updates label text based on mood selection"""
+    self.label_mood.text = f"Today you're feeling: {mood}"
+
+
+- Re-commented all code for readability.
+- Adjusted component spacing and colours for usability.
+
+**Challenges:**
+
+- Cleaning leftover fragments from old tests caused errors.
+- Breaking dropdown logic during reorganising.
+- Constant cycle of “fix one thing, break another.”
+
+**Small Wins:**
+
+- The project now feels like a real app, not just an assignment.
+
+- I’m learning to debug logically rather than emotionally. I can prompt ChatGPT and ask the right questions to help solve a problem.
